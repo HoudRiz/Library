@@ -42,5 +42,71 @@
         <div class="display-container"></div>
       </div>
     </div>
+    <div class="form-container" id="form-container">
+      <form action="" id="form" method="get" autocomplete="off">
+        <div class="inputs">
+          <div class="title">
+            <input
+              type="text"
+              name="title"
+              id="title"
+              placeholder="Title"
+              required
+            />
+            <label for="title" class="popup"></label>
+          </div>
+          <div class="author">
+            <input
+              type="text"
+              name="author"
+              id="author"
+              placeholder="&#8203;"
+              required
+            />
+            <label for="author" class="popup">Author</label>
+          </div>
+          <div class="read">
+            <input
+              type="number"
+              name="read"
+              id="read"
+              placeholder="&#8203;"
+              required
+            />
+            <label for="read" class="popup">Read</label>
+          </div>
+          <div class="total">
+            <input
+              type="number"
+              name="total"
+              id="total"
+              placeholder="&#8203;"
+              required
+            />
+            <label for="total" class="popup">Total</label>
+          </div>
+          <div class="cover-page">
+            <input type="file" name="cover-page" id="cover-page" required />
+            <label for="cover-page">+ Cover Page</label>
+          </div>
+          <button type="submit" class="add">Add</button>
+        </div>
+      </form>
+    </div>
+    <button class="circle-btn" onclick="toggleColor()">
+      <span class="btn-icon">
+        <svg
+          class="plus-icon"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M10 1V19" stroke="white" stroke-width="2" />
+          <path d="M1 10H19" stroke="white" stroke-width="2" />
+        </svg>
+      </span>
+    </button>
   </body>
 </html>
