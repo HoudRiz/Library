@@ -60,3 +60,8 @@ body {
 .total-pages > .number {
   color: #ffca0e;
 }
+
+.name-container {
+  margin: 0.3rem 1.3rem;
+  display: flex;
+}
