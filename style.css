@@ -25,3 +25,37 @@ body {
 .left-side {
   display: flex;
 }
+/* .main-container { */
+/* margin: 2rem; */
+/* } */
+.stat-container {
+  display: flex;
+  justify-content: center;
+}
+.stat {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0.3rem 1.3rem;
+  background-color: #292828;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+}
+.number {
+  font-size: 2.25rem;
+}
+.sidebar-text {
+  font-size: 1.25rem;
+}
+.books > .number {
+  color: #5fcc2b;
+}
+.pages-read > .number {
+  color: #2586f8;
+}
+.books-completed > .number {
+  color: #f3416c;
+}
+.total-pages > .number {
+  color: #ffca0e;
+}
