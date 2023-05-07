@@ -75,6 +75,7 @@ body {
 .name-container {
   margin: 0.3rem 1.3rem;
   display: flex;
+  gap: 0.3rem;
 }
 
 .display-container {
@@ -309,7 +310,8 @@ body {
   transition: opacity 0.5s ease;
 }
 
-.card-top button {
+.card-top button,
+.edit-name {
   padding: 0;
   background-color: transparent;
   border: none;
