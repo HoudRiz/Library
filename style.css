@@ -25,9 +25,10 @@ body {
 .left-side {
   display: flex;
 }
-/* .main-container { */
-/* margin: 2rem; */
-/* } */
+.main-container {
+  display: grid;
+  justify-content: center;
+}
 .stat-container {
   display: flex;
   justify-content: center;
