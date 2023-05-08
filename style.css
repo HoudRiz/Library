@@ -35,6 +35,13 @@ body {
 .github > a {
   color: white;
   margin-inline: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.github > a > img {
+  height: 30px;
+  width: 30px;
 }
 .main-container {
   display: grid;
