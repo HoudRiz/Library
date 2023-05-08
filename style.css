@@ -28,6 +28,7 @@ body {
 .left-side {
   display: flex;
   margin-inline: 0.5rem;
+  gap: 1rem;
 }
 .site-name {
   font-size: 3.5rem;
@@ -319,7 +320,8 @@ body {
 }
 
 .card-top button,
-.edit-name {
+.edit-name,
+.nav-button {
   padding: 0;
   background-color: transparent;
   border: none;
