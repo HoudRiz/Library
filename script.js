@@ -71,7 +71,7 @@ form.addEventListener("submit", (e) => {
           </div>
           <img src = ${books.coverPage}>
           <div class="card-bottom">
-          <div class="number">${books.read} | ${books.total}</div>
+          <div class="number-read">${books.read} | ${books.total}</div>
           <progress id='p0' value='${books.read}' max='${books.total}'></progress>
 
         </div>
