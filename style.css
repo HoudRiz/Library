@@ -43,6 +43,7 @@ body {
 .stat-container {
   display: flex;
   justify-content: center;
+  margin: 1rem 0rem;
 }
 .stat {
   display: flex;
@@ -320,14 +321,15 @@ body {
   transition: 0.5s ease-in-out;
 }
 
-.card-top .card-edit:hover {
+.card-top .card-edit:hover,
+.edit-name:hover {
   color: #2586f8;
-  scale: 1.1;
+  scale: 1.2;
   transition: 0.2s;
 }
 .card-top .card-delete:hover {
   color: #f3416c;
-  scale: 1.1;
+  scale: 1.2;
   transition: 0.2s;
 }
 .card-title {
