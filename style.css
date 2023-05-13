@@ -24,6 +24,7 @@ body {
   align-items: center;
   background-color: #292828;
 }
+
 .sidebar {
   height: 100%;
   display: flex;
@@ -31,15 +32,26 @@ body {
   width: 18.75rem;
   text-align: center;
   background-color: #1e1e1e;
-  position: sticky;
-  display: none;
+  position: absolute;
+  z-index: 10;
+  left: -20rem;
+
+  /* display: none; */
 }
 
+.sidebar:active {
+  left: 0;
+}
 .sidebar .stat {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0.3rem 1.3rem;
+}
+
+.stat-header {
+  font-size: 2rem;
+  margin-top: 2rem;
 }
 
 .sidebar .github {
