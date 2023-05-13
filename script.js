@@ -5,9 +5,13 @@ let form = document.querySelector("#form");
 let bookLibrary = [];
 let displayContainer = document.querySelector(".display-container");
 let bookNumber = document.querySelector(".book-number");
+let sBookNumber = document.querySelector(".side-book-number");
 let readNumber = document.querySelector(".read-number");
+let sReadNumber = document.querySelector(".side-read-number");
 let completedNUmber = document.querySelector(".completed-number");
+let sCompletedNUmber = document.querySelector(".side-completed-number");
 let totalPageNumber = document.querySelector(".tp-number");
+let sTotalPageNumber = document.querySelector(".side-tp-number");
 let titleName = document.querySelector(".name");
 
 function toggleColor() {
@@ -91,11 +95,13 @@ form.addEventListener("submit", (e) => {
 
 function bookCount() {
   bookNumber.innerText = bookLibrary.length;
+  sBookNumber.innerText = bookLibrary.length;
 }
 
 function readCount() {
   let readSum = bookLibrary.reduce((sum, book) => sum + parseInt(book.read), 0);
   readNumber.innerHTML = readSum;
+  sReadNumber.innerHTML = readSum;
 }
 
 function totalPageCount() {
@@ -104,6 +110,7 @@ function totalPageCount() {
     0
   );
   totalPageNumber.innerHTML = readSum;
+  sTotalPageNumber.innerHTML = readSum;
   console.log(readSum);
 }
 
@@ -114,6 +121,7 @@ function completedCount() {
       completedCounter++;
     }
     completedNUmber.innerText = completedCounter;
+    sCompletedNUmber.innerText = completedCounter;
   }
 }
 
