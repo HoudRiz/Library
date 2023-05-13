@@ -131,6 +131,7 @@ function cardDelete(event) {
   let deletedCard = document.getElementById(`${index}`);
   deletedCard.remove();
   bookLibrary.splice(`${index}`, 1);
+  displayStat();
 }
 
 function cardEdit(event) {
@@ -138,4 +139,5 @@ function cardEdit(event) {
   let editedCard = document.getElementById(`${index}`);
   console.log(index);
   toggleColor();
+  displayStat();
 }
