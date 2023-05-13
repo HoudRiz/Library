@@ -216,7 +216,8 @@ body {
   label[for="cover-page"]:hover {
     color: #2586f8;
   }
-  /* specifically for border radius*/
+  /* specifically for borde
+    text-align: center;r radius*/
   .add,
   .cover-page,
   .form-container {
@@ -224,6 +225,15 @@ body {
   }
 
   input[type="file"] {
+    position: absolute;
+    bottom: 1.5rem;
+    border: none;
+    text-align: center;
+    left: 50%;
+    transform: translate(-20%, -50%);
+    text-align: center;
+  }
+  input::file-selector-button {
     display: none;
   }
 
