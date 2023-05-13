@@ -134,5 +134,8 @@ function cardDelete(event) {
 }
 
 function cardEdit(event) {
-  console.log("woooo");
+  let index = event.currentTarget.dataset.indexNumber;
+  let editedCard = document.getElementById(`${index}`);
+  console.log(index);
+  toggleColor();
 }
