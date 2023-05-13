@@ -140,4 +140,12 @@ function cardEdit(event) {
   console.log(index);
   toggleColor();
   displayStat();
+  formFilling(index);
+}
+
+function formFilling(index) {
+  let currentBook = bookLibrary[index];
+  console.log(currentBook);
+  console.log(currentBook.title);
+  document.querySelector("#title").value = currentBook.title;
 }
