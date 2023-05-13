@@ -127,10 +127,12 @@ function titleEdit() {
 }
 
 function cardDelete(event) {
-  let index = event.target.dataset.indexNumber;
-  console.log(index);
+  let index = event.currentTarget.dataset.indexNumber;
+  let deletedCard = document.getElementById(`${index}`);
+  deletedCard.remove();
+  bookLibrary.splice(`${index}`, 1);
 }
 
-function cardEdit() {
+function cardEdit(event) {
   console.log("woooo");
 }
