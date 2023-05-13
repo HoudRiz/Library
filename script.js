@@ -17,12 +17,13 @@ function toggleColor() {
   form.reset();
 }
 
-function book(title, author, read, total, coverPage) {
+function book(title, author, read, total, coverPage, file) {
   this.title = title;
   this.author = author;
   this.read = read;
   this.total = total;
   this.coverPage = coverPage;
+  this.file = file;
 }
 book.prototype.info = function () {
   return Object.values(this);
@@ -42,7 +43,8 @@ form.addEventListener("submit", (e) => {
     author.value,
     read.value,
     total.value,
-    url
+    url,
+    file
   );
   bookLibrary.push(addBook);
   console.log(addBook.info());
@@ -148,4 +150,12 @@ function formFilling(index) {
   console.log(currentBook);
   console.log(currentBook.title);
   document.querySelector("#title").value = currentBook.title;
+  document.querySelector("#author").value = currentBook.author;
+  document.querySelector("#read").value = currentBook.read;
+  document.querySelector("#total").value = currentBook.total;
+  console.log(currentBook.file);
+  console.log(document.querySelector("#cover-page"));
+  const file = new FileList();
+  file.append(currentBook.file);
+  document.querySelector("#cover-page").files = file;
 }
