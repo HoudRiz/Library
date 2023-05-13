@@ -139,7 +139,7 @@ function cardDelete(event) {
 function cardEdit(event) {
   let index = event.currentTarget.dataset.indexNumber;
   let editedCard = document.getElementById(`${index}`);
-  console.log(index);
+  console.log(editedCard);
   toggleColor();
   displayStat();
   formFilling(index);
@@ -155,7 +155,7 @@ function formFilling(index) {
   document.querySelector("#total").value = currentBook.total;
   console.log(currentBook.file);
   console.log(document.querySelector("#cover-page"));
-  const file = new FileList();
-  file.append(currentBook.file);
-  document.querySelector("#cover-page").files = file;
+  let fileList = [];
+  fileList.push(currentBook.file);
+  document.querySelector("#cover-page").files[0] = file;
 }
