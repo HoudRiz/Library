@@ -13,6 +13,7 @@ let sCompletedNUmber = document.querySelector(".side-completed-number");
 let totalPageNumber = document.querySelector(".tp-number");
 let sTotalPageNumber = document.querySelector(".side-tp-number");
 let titleName = document.querySelector(".name");
+let sidebar = document.querySelector(".sidebar");
 
 function toggleColor() {
   plusIcon.classList.toggle("rotate");
@@ -166,4 +167,9 @@ function formFilling(index) {
   let fileList = [];
   fileList.push(currentBook.file);
   document.querySelector("#cover-page").files[0] = file;
+}
+
+function popSide() {
+  sidebar.classList.add("open");
+  console.log("test");
 }

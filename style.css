@@ -39,7 +39,7 @@ body {
   /* display: none; */
 }
 
-.sidebar:active {
+.open {
   left: 0;
 }
 .sidebar .stat {
