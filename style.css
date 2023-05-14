@@ -23,6 +23,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #292828;
+  padding: 0.5rem;
 }
 
 .sidebar {
