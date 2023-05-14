@@ -158,7 +158,6 @@ function cardEdit(event) {
 function formFilling(index) {
   let currentBook = bookLibrary[index];
   console.log(currentBook);
-  console.log(currentBook.title);
   document.querySelector("#title").value = currentBook.title;
   document.querySelector("#author").value = currentBook.author;
   document.querySelector("#read").value = currentBook.read;
