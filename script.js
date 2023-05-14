@@ -14,6 +14,7 @@ let totalPageNumber = document.querySelector(".tp-number");
 let sTotalPageNumber = document.querySelector(".side-tp-number");
 let titleName = document.querySelector(".name");
 let sidebar = document.querySelector(".sidebar");
+let navButton = document.querySelector(".nav-button");
 
 function toggleColor() {
   plusIcon.classList.toggle("rotate");
@@ -168,6 +169,15 @@ function formFilling(index) {
   fileList.push(currentBook.file);
   document.querySelector("#cover-page").files[0] = file;
 }
+
+document.addEventListener("click", (e) => {
+  let isClosest = e.target.closest(".sidebar");
+  let closestNavButton = e.target.closest(".nav-button");
+  console.log(isClosest);
+  if (!isClosest && !closestNavButton && sidebar.classList.contains("open")) {
+    sidebar.classList.remove("open");
+  }
+});
 
 function popSide() {
   sidebar.classList.add("open");
