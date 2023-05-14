@@ -37,7 +37,8 @@ body {
   z-index: 10;
   left: -20rem;
   transition: 0.2s ease-in-out;
-
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   /* display: none; */
 }
 
@@ -88,8 +89,13 @@ body {
   color: white;
   margin-inline: 0.5rem;
   display: flex;
+  text-decoration: none;
   justify-content: center;
   gap: 0.5rem;
+}
+
+.github > a:hover {
+  text-decoration: underline;
 }
 .github > a > img {
   height: 30px;
@@ -389,6 +395,8 @@ body {
   color: white;
   margin-top: 0.5rem;
   transition: 0.5s ease-in-out;
+}
+.nav-button {
   display: none;
 }
 
