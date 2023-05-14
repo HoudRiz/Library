@@ -155,6 +155,7 @@ function cardEdit(event) {
   formFilling(index);
 }
 
+// fills form when clicked on edit button (needs to fill the file space)
 function formFilling(index) {
   let currentBook = bookLibrary[index];
   console.log(currentBook);
@@ -171,14 +172,14 @@ function formFilling(index) {
 
 document.addEventListener("click", (e) => {
   let isClosest = e.target.closest(".sidebar");
-  let closestNavButton = e.target.closest(".nav-button");
+  let closestNavButton = e.target.closest(".nav-button"); //sidebar keeps closing when pressed on nav button
   console.log(isClosest);
   if (!isClosest && !closestNavButton && sidebar.classList.contains("open")) {
     sidebar.classList.remove("open");
   }
 });
 
+// opens sidebar
 function popSide() {
   sidebar.classList.add("open");
-  console.log("test");
 }
