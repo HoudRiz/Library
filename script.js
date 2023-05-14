@@ -153,6 +153,7 @@ function cardEdit(event) {
   toggleColor();
   displayStat();
   formFilling(index);
+  cardDelete(event);
 }
 
 // fills form when clicked on edit button (needs to fill the file space)
@@ -165,9 +166,9 @@ function formFilling(index) {
   document.querySelector("#total").value = currentBook.total;
   console.log(currentBook.file);
   console.log(document.querySelector("#cover-page"));
-  let fileList = [];
-  fileList.push(currentBook.file);
-  document.querySelector("#cover-page").files[0] = file;
+  // let fileList = [];
+  // fileList.push(currentBook.file);
+  // document.querySelector("#cover-page").files[0] = file;
 }
 
 document.addEventListener("click", (e) => {
