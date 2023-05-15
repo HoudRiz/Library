@@ -31,9 +31,7 @@ function book(title, author, read, total, coverPage, file) {
   this.coverPage = coverPage;
   this.file = file;
 }
-book.prototype.info = function () {
-  return Object.values(this);
-};
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let title = document.querySelector("#title");
@@ -53,8 +51,6 @@ form.addEventListener("submit", (e) => {
     file
   );
   bookLibrary.push(addBook);
-  console.log(addBook.info());
-  console.log(bookLibrary.length);
 
   displayContainer.innerHTML = "";
   for (let books of bookLibrary) {
@@ -113,7 +109,6 @@ function totalPageCount() {
   );
   totalPageNumber.innerHTML = readSum;
   sTotalPageNumber.innerHTML = readSum;
-  console.log(readSum);
 }
 
 function completedCount() {
@@ -149,7 +144,6 @@ function cardDelete(event) {
 function cardEdit(event) {
   let index = event.currentTarget.dataset.indexNumber;
   let editedCard = document.getElementById(`${index}`);
-  console.log(editedCard);
   toggleColor();
   displayStat();
   formFilling(index);
@@ -159,13 +153,10 @@ function cardEdit(event) {
 // fills form when clicked on edit button (needs to fill the file space)
 function formFilling(index) {
   let currentBook = bookLibrary[index];
-  console.log(currentBook);
   document.querySelector("#title").value = currentBook.title;
   document.querySelector("#author").value = currentBook.author;
   document.querySelector("#read").value = currentBook.read;
   document.querySelector("#total").value = currentBook.total;
-  console.log(currentBook.file);
-  console.log(document.querySelector("#cover-page"));
   // let fileList = [];
   // fileList.push(currentBook.file);
   // document.querySelector("#cover-page").files[0] = file;
@@ -174,7 +165,6 @@ function formFilling(index) {
 document.addEventListener("click", (e) => {
   let isClosest = e.target.closest(".sidebar");
   let closestNavButton = e.target.closest(".nav-button"); //sidebar keeps closing when pressed on nav button
-  console.log(isClosest);
   if (!isClosest && !closestNavButton && sidebar.classList.contains("open")) {
     sidebar.classList.remove("open");
   }
